@@ -13,7 +13,7 @@ root.render(
   </React.StrictMode>
 );
 
-//Se você deseja começar a medir o desempenho em seu aplicativo, passe uma função
-// Para registrar os resultados (por exemplo: relatáriowebvitals (console.log))
-// ou envie para um terminal de análise.Saiba mais: https://bit.ly/cra-vitals
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

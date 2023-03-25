@@ -2,6 +2,18 @@ import React from 'react'
 
 export default function Cabecalho() {
   return (
-    <div>Cabecalho</div>
+    <header>
+      <div>
+        
+      </div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </header>
   )
 }

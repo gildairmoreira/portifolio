@@ -1,7 +1,10 @@
-function App() {
+import Cabecalho from "../components/Cabecalho";
+
+function App()
+{
   return (
     <div className="App">
-     
+      <Cabecalho/>
     </div>
   );
 }

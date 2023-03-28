@@ -1,4 +1,4 @@
-import LogoLetraG from './logos/LogoLetraG'
+import LogoLetraG from 'assets/componentesImagens/LogoLetraG'
 import styles from './cabecalho.module.scss'
 import ItensNavegação from './itensNav/ItensNavegação'
 

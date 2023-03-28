@@ -1,4 +1,4 @@
-import BRA from 'assets/icons/BRA.svg'
+import BRA from 'assets/images/BRA.svg'
 
 export default function LogoBrasil() {
     return(

@@ -1,6 +1,6 @@
 import React from 'react'
-import LogoBrasil from '../logos/LogoBrasil'
-import SetaDown from '../logos/SetaDown'
+import LogoBrasil from 'assets/componentesImagens/LogoBrasil'
+import SetaDown from 'assets/componentesImagens/SetaDown'
 
 export default function ItensNavegação()
 {

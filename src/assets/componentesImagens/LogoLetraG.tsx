@@ -1,4 +1,4 @@
-import LogoG from 'assets/icons/Logo.svg'
+import LogoG from 'assets/images/Logo.svg'
 
 export default function LogoLetraG()
 {

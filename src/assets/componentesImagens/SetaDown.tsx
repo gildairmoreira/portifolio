@@ -1,4 +1,4 @@
-import seta_baixo from 'assets/icons/arrow_down.svg'
+import seta_baixo from 'assets/images/arrow_down.svg'
 
 export default function SetaDown()
 {

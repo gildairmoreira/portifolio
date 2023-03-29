@@ -1,5 +1,6 @@
 import Apresentacao from "components/Apresentacao";
 import Cabecalho from "../components/Cabecalho";
+import './reset.module.scss'
 
 function App()
 {
@@ -10,5 +11,4 @@ function App()
     </div>
   );
 }
-
 export default App;

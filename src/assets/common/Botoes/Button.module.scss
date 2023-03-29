@@ -1,0 +1,85 @@
+@import 'assets/styles/variaveis.scss';
+
+.button {
+  --border-width:2px;
+  --border-radius:5px;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+
+
+  border-radius: var(--border-radius);
+  font: inherit;
+  background: $gradiente-branco-azul;
+  border: 0;
+
+  z-index: 1;
+
+  &::before{
+    content: '';
+    display: block;
+    height: calc(100% - calc(var(--border-width) * 2));
+    width: calc(100% - calc(var(--border-width) * 2));
+
+    background: white;
+    position: absolute;
+
+    top: var(--border-width);
+    left: var(--border-width);
+
+    border-radius: calc(var(--border-radius) - var(--border-width));
+    
+    z-index: -1;
+  }
+
+
+}
+
+
+
+
+
+/* 
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+
+  &:before {
+    border-image: linear-gradient(51.06deg, #fff 0.87%, #22bcd9 97.48%) 1;
+  }
+
+  &:after {
+    border-image: linear-gradient(51.06deg, #22bcd9 0.87%, #fff 97.48%) 1;
+  }
+
+  &:hover:before {
+    border-image: linear-gradient(51.06deg, #22bcd9 0.87%, #fff 97.48%) 1;
+  }
+
+  &:hover:after {
+    border-image: linear-gradient(51.06deg, #fff 0.87%, #22bcd9 97.48%) 1;
+  }
+
+  .icon {
+    margin-right: .5rem;
+  }
+
+  .text {
+    margin-right: 8px;
+  } */

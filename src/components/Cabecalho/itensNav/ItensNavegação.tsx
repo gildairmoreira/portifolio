@@ -1,22 +1,23 @@
 import React from 'react'
 import LogoBrasil from 'assets/componentesImagens/LogoBrasil'
 import SetaDown from 'assets/componentesImagens/SetaDown'
+import styles from './itensNavegacao.module.scss'
 
 export default function ItensNavegação()
 {
     return (
-        <>
-            <li>Sobre mim</li>
-            <li>Skills</li>
-            <li>Formação</li>
-            <li>Projetos</li>
-            <li>Contato</li>
-            <li>
-                <a href='/#'>
-                    <LogoBrasil />
-                    <SetaDown />
-                </a>
-            </li>
-        </>
+        <ul>
+            <li className={styles.hoverable}>Sobre mim</li>
+            <li className={styles.hoverable}>Skills</li>
+            <li className={styles.hoverable}>Formação</li>
+            <li className={styles.hoverable}>Projetos</li>
+            <li className={styles.hoverable}>Contato</li>
+
+            <a href='/'>
+                <LogoBrasil />
+                <SetaDown />
+            </a>
+
+        </ul>
     )
 }

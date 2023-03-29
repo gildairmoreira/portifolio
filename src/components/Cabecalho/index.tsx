@@ -11,12 +11,11 @@ export default function Cabecalho()
         <LogoLetraG />
         <h3>Portifólio</h3>
       </div>
+      
       <nav className={styles.cabecalho__navegação}>
-        <ul>
           <ItensNavegação/>
-        </ul>
-
       </nav>
+
     </header>
   )
 }

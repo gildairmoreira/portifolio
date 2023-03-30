@@ -12,9 +12,9 @@ export default function Apresentacao()
       <div className={style.container__left}>
 
         <div className={style.titulos}>
-          <h2 className={style.container__h2}>Olá, eu sou</h2>
+          <h2>Olá, eu sou</h2>
           <h1 className={style.container__h1}>Gildair moreira</h1>
-          <h3 className={style.container__h3} >Desenvolvedor Front-end .</h3>
+          <h2>Desenvolvedor Front-end .</h2>
         </div>
 
         <div className={style.botoes}>

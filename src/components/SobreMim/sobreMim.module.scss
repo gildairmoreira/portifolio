@@ -1,0 +1,24 @@
+@import "../../assets/styles/variaveis.scss";
+
+.container {
+  background: $fundo-claro-escuro;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  justify-content: space-around;
+  padding: 6.5%;
+
+  .container__left {
+    display: flex;
+    
+    .foto {
+      margin-right: 3rem;
+      
+      img {
+        filter: opacity(75%);
+        transition: 0.4s;
+      }
+    }
+  }
+}

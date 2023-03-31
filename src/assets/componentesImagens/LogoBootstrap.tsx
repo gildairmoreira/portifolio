@@ -1,5 +1,3 @@
-import bootstrap from 'assets/images/bootstrap.svg'
-
 export default function LogoBootstrap()
 {
     return (

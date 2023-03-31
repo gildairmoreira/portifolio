@@ -1,8 +1,6 @@
-import SASS from 'assets/images/sass.svg'
-
 export default function LogoSass()
 {
     return (
-        <img src={SASS} alt="Tecnologia do SASS" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Tecnologia do SASS" />
     )
 }

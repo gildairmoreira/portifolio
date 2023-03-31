@@ -1,6 +1,5 @@
 import LogoBootstrap from 'assets/componentesImagens/LogoBootstrap';
 import LogoCss from 'assets/componentesImagens/LogoCss';
-import LogoGitHub from 'assets/componentesImagens/LogoGitHub';
 import LogoHtml from 'assets/componentesImagens/LogoHtml';
 import LogoJs from 'assets/componentesImagens/LogoJs';
 import LogoNodejs from 'assets/componentesImagens/LogoNode';
@@ -8,6 +7,7 @@ import LogoReact from 'assets/componentesImagens/LogoReact';
 import LogoSass from 'assets/componentesImagens/LogoSass';
 import LogoTs from 'assets/componentesImagens/LogoTs';
 import LogoWP from 'assets/componentesImagens/LogoWP';
+import LogoGit from 'assets/componentesImagens/LogoGit';
 import React from 'react'
 import "./skills.scss";
 
@@ -19,16 +19,16 @@ interface Skill
 }
 
 const skills: Skill[] = [
-    { title: "Skill 1", image: <LogoHtml/> },
-    { title: "Skill 2", image: <LogoCss/> },
-    { title: "Skill 3", image: <LogoJs/> },
-    { title: "Skill 4", image: <LogoReact/> },
-    { title: "Skill 5", image: <LogoTs/> },
-    { title: "Skill 6", image: <LogoNodejs/> },
-    { title: "Skill 7", image: <LogoGitHub/> },
-    { title: "Skill 8", image: <LogoSass/> },
-    { title: "Skill 9", image: <LogoBootstrap/> },
-    { title: "Skill 10", image: <LogoWP /> },
+    { title: "HTML", image: <LogoHtml/> },
+    { title: "CSS", image: <LogoCss/> },
+    { title: "JavaScript", image: <LogoJs/> },
+    { title: "React JS", image: <LogoReact/> },
+    { title: "TypeScript", image: <LogoTs/> },
+    { title: "Node JS", image: <LogoNodejs/> },
+    { title: "GIT", image: <LogoGit/> },
+    { title: "Sass", image: <LogoSass/> },
+    { title: "Bootstrap", image: <LogoBootstrap/> },
+    { title: "WordPress", image: <LogoWP /> },
 ];
 
 const Skills: React.FC = () =>

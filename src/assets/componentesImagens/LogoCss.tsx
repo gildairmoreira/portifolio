@@ -1,8 +1,6 @@
-import CSS from 'assets/images/css3.svg'
-
 export default function LogoCss()
 {
     return (
-        <img src={CSS} alt="Tecnologia do CSS" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Tecnologia do CSS" />
     )
 }

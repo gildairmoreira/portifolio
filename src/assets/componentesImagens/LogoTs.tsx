@@ -1,8 +1,6 @@
-import TS from 'assets/images/typescript.svg'
-
 export default function LogoTs()
 {
     return (
-        <img src={TS} alt="Tecnologia do Typescript" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="Tecnologia do Typescript" />
     )
 }

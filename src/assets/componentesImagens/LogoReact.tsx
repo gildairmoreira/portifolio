@@ -1,8 +1,6 @@
-import React from 'assets/images/react-native.svg'
-
 export default function LogoReact()
 {
     return (
-        <img src={React} alt="Tecnologia do React" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Tecnologia do React" />
     )
 }

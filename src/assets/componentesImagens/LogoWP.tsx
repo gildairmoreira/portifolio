@@ -1,8 +1,6 @@
-import WP from 'assets/images/wordpress.svg'
-
 export default function LogoWP()
 {
     return (
-        <img src={WP} alt="Tecnologia do wordpress" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="Tecnologia do wordpress" />
     )
 }

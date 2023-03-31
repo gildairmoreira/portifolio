@@ -15,7 +15,7 @@ const Botao: React.FC<BotaoProps> = ({ icon, text, gradient, url }) =>
 {
 
     const backgroundStyle = {
-        backgroundImage: gradient,
+        backgroundImage: gradient
     }
 
 

@@ -1,7 +1,9 @@
+@import "assets/styles/variaveis.scss";
+
 .hoverable {
   cursor: pointer;
   transition: color 0.2s ease-in-out;
   &:hover {
-    color: #00D2DF;
+    color: $azul-detail;
   }
 }

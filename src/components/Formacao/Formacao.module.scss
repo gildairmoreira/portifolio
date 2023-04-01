@@ -1,0 +1,131 @@
+@import "/src/assets/styles/variaveis.scss";
+
+/* .formacao__academica {
+  background: $fundo-claro-escuro;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+
+  //Titulo E containers
+  .formacao__academica-titulo {
+    color: $azul-titulos;
+    font-family: $fonte-raleway;
+    font-weight: 700;
+    font-size: 2rem;
+
+    text-align: center;
+    margin-bottom: 3.5rem;
+    -webkit-text-stroke: 1px $preto;
+  }
+}
+ */
+
+ .formacao__academica {
+  display: flex;
+  padding: 3% 5% 5.5%;
+   background: $fundo-claro-escuro;
+  flex-direction: column;
+  align-items: center;
+
+  &-titulo {
+    margin-bottom: 30px;
+    color: $azul-titulos;
+    font-family: $fonte-raleway;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    -webkit-text-stroke: 1px $preto;
+  }
+
+  &-carrossel {
+    position: relative;
+    width: 90%;
+    height: 300px;
+    margin: 0 1rem 50px 1rem;
+
+    .formacao__bloco {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin: 0 5px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .carousel__item--text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .carousel-arrow-prev {
+      left: 10px;
+    }
+
+    .carousel-arrow-next {
+      right: 10px;
+    }
+
+    .carousel__pontos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      span {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #000;
+        margin: 0 5px;
+        cursor: pointer;
+
+        &.active {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+

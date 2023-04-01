@@ -1,63 +1,33 @@
-import { useState } from 'react';
-import './Formacao.scss';
-import Carousel from 'react-elastic-carousel';
-import { idText } from 'typescript';
+import styles from "./Formacao.module.scss";
+import SetaBack from "assets/componentesImagens/SetaBack";
+import SetaNext from "assets/componentesImagens/SetaNext";
 
 interface Formacao 
 {
     id: number;
-    empresa: string;
-    logo: string;
+    image: string;
     curso: string;
     data: string;
 }
 
-const formacoes: Formacao[] = [
-    { id: 1, empresa: 'Empresa A', logo: 'logo-a.png', curso: 'Curso 1', data: '01/01/2022' },
-    { id: 2, empresa: 'Empresa B', logo: 'logo-b.png', curso: 'Curso 2', data: '01/02/2022' },
-    { id: 3, empresa: 'Empresa C', logo: 'logo-c.png', curso: 'Curso 3', data: '01/03/2022' },
-    { id: 4, empresa: 'Empresa D', logo: 'logo-d.png', curso: 'Curso 4', data: '01/04/2022' },
-    { id: 5, empresa: 'Empresa E', logo: 'logo-e.png', curso: 'Curso 5', data: '01/05/2022' },
-    { id: 6, empresa: 'Empresa F', logo: 'logo-f.png', curso: 'Curso 6', data: '01/06/2022' },
+
+const Certificados: Formacao[] = [
+    { id: 1, image: 'image-a.png', curso: 'Curso 1', data: '2022 - alura' },
+    { id: 2, image: 'image-b.png', curso: 'Curso 2', data: '2022 - alura' },
+    { id: 3, image: 'image-c.png', curso: 'Curso 3', data: '2022 - alura' },
 ];
 
-
-
-
-const FormacaoAcademica = () =>
-{
-
-    const [ formacoesAcademicas, setFormacoesAcademicas ] = useState(formacoes);
-    const [ currentIndex, setCurrentIndex ] = useState(0);
-
-
-
+const FormacaoAcademica: React.FC = () => {
+    
     return (
-        <div className="formacao-academica">
-            <h2 className="formacao-academica__titulo">Formação Acadêmica</h2>
-            <div className="formacao-academica__carrossel">
-                <Carousel key={formacoes}
-                    isRTL
-                    itemsToShow={3}
-                    
-
-                >
-                    {formacoesAcademicas.map((formacao) => (
-                        <div key={formacao.id} className="formacao">
-                            <img src={formacao.logo} alt={formacao.empresa} />
-                            <div className="curso">
-                                <span className="empresa">{formacao.empresa}</span>
-                                <hr />
-                                <span className="nome-curso">{formacao.curso}</span>
-                                <span className="data">{formacao.data}</span>
-                            </div>
-                        </div>
-                    ))}
-                </Carousel>
+        <div className={styles.formacao__academica}>
+            <h2 className={styles[ 'formacao__academica-titulo' ]}>Formação Acadêmica</h2>
+            <div className={styles[ 'formacao__academica-carrossel' ]}>
+                
             </div>
         </div>
     );
-
 }
+
 
 export default FormacaoAcademica

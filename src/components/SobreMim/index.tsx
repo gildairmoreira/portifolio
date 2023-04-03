@@ -21,7 +21,7 @@ export default function SobreMim()
 
         <div className={styles.container__textos}>
           <h3>Sobre mim</h3>
-          <h4>Jaboticatubas, Minas Gerais</h4>
+          <h4>Minas Gerais</h4>
           <p>
             Sou um jovem desenvolvedor front-end autodidata, apaixonado por transformar ideias em realidade com minhas habilidades em React e outras tecnologias.
           </p>

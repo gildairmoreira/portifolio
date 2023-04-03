@@ -1,14 +1,14 @@
 import style from '../skills.module.scss';
-import LogoHtml from 'assets/componentesImagens/LogoHtml';
-import LogoCss from 'assets/componentesImagens/LogoCss';
-import LogoJs from 'assets/componentesImagens/LogoJs';
-import LogoReact from 'assets/componentesImagens/LogoReact';
-import LogoTs from 'assets/componentesImagens/LogoTs';
-import LogoNodejs from 'assets/componentesImagens/LogoNode';
-import LogoGit from 'assets/componentesImagens/LogoGit';
-import LogoSass from 'assets/componentesImagens/LogoSass';
-import LogoBootstrap from 'assets/componentesImagens/LogoBootstrap';
-import LogoWP from 'assets/componentesImagens/LogoWP';
+import LogoHtml from 'assets/componentesImagens/skills/LogoHtml';
+import LogoCss from 'assets/componentesImagens/skills/LogoCss';
+import LogoJs from 'assets/componentesImagens/skills/LogoJs';
+import LogoReact from 'assets/componentesImagens/skills/LogoReact';
+import LogoTs from 'assets/componentesImagens/skills/LogoTs';
+import LogoNodejs from 'assets/componentesImagens/skills/LogoNode';
+import LogoGit from 'assets/componentesImagens/skills/LogoGit';
+import LogoSass from 'assets/componentesImagens/skills/LogoSass';
+import LogoBootstrap from 'assets/componentesImagens/skills/LogoBootstrap';
+import LogoWP from 'assets/componentesImagens/skills/LogoWP';
 
 export interface Skill
 {

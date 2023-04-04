@@ -44,8 +44,9 @@ const SkillList: React.FC = () =>
                 >
                     <div className={style.skill__image}>
                         {skill.image}
-                        <div className={style.skill__title}>{skill.title}</div>
                     </div>
+                    
+                    <div className={style.skill__title}>{skill.title}</div>
                 </div>
             ))}
         </div>

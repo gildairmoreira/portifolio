@@ -4,6 +4,7 @@ import SobreMim from "components/SobreMim";
 import Skills from "components/Skills";
 import FormacaoAcademica from "components/Formacao";
 import './reset.module.scss'
+import Projetos from "components/Projetos";
 
 function App()
 {
@@ -14,6 +15,7 @@ function App()
       <SobreMim />
       <Skills/>
       <FormacaoAcademica/>
+      <Projetos/>
     </div>
   );
 }

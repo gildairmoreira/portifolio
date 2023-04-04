@@ -55,7 +55,7 @@
     box-shadow: inset 7px -7px 20px #666666, inset -7px 7px 20px $branco;
 
     img {
-      width: 65%;
+      max-width: 65%;
       margin: 10% 0;
     }
     hr {
@@ -70,11 +70,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      text-align: left;
-      margin: 10px 0 1.5rem 0;
+      margin: 0 0 1.5rem;
       transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
       h3 {
-        
         box-sizing: content-box;
         margin: 0 5%;
         max-width: 100%;
@@ -128,7 +126,7 @@
       font-family: "Source Sans Pro", sans-serif;
       font-size: 14px;
       font-weight: 600;
-      color: #606060;
+      color: rgb(0, 138, 138);
       text-shadow: 0 1px #fff;
 
        opacity: 0;

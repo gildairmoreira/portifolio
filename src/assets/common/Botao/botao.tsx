@@ -11,14 +11,12 @@ interface BotaoProps
 }
 
 
-const Botao: React.FC<BotaoProps> = ({ icon, text, gradient, url }) =>
+export default function Botao ({ icon, text, gradient, url }:BotaoProps)
 {
 
     const backgroundStyle = {
         backgroundImage: gradient
     }
-
-
 
     return (
         <a
@@ -34,5 +32,3 @@ const Botao: React.FC<BotaoProps> = ({ icon, text, gradient, url }) =>
 
     )
 }
-
-export default Botao

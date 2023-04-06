@@ -45,6 +45,8 @@ const Certificados: FormacaoAcademicaProps[] = [
     { id: 12, image: <LogoAlura />, curso: 'WordPress: INTEGRAÇÃO E INTERNACIONALIZAÇÃO', data: '18/01/2023', link: 'https://cursos.alura.com.br/user/gildair/course/wordpress-integracao-whatsapp/certificate' },
 
     { id: 13, image: <LogoAlura />, curso: 'Curso GIT E GITHUB', data: '29/10/2022', link: 'https://cursos.alura.com.br/user/gildair/course/git-github-repositorio-commit-versoes/certificate' },
+
+    { id: 14, image: <LogoAlura />, curso: 'Curso Introdutorio de Figma', data: '15/03/2023', link: 'https://cursos.alura.com.br/user/gildair/course/figma-construindo-layout-primeiro-site-mobile/certificate' },
 ];
 export default function Carrousel() {
   return (

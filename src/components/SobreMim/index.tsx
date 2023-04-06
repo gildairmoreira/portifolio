@@ -1,4 +1,4 @@
-import Botao from 'assets/common/Botoes/botao'
+import Botao from 'assets/common/Botao/botao'
 import LogoDowload from 'assets/componentesImagens/LogoDowload'
 import LogoEmail from 'assets/componentesImagens/LogoEmail'
 import MinhaFoto from 'assets/componentesImagens/MinhaFoto'
@@ -21,7 +21,7 @@ export default function SobreMim()
 
         <div className={styles.container__textos}>
           <h3>Sobre mim</h3>
-          <h4>Minas Gerais</h4>
+          <h4>Minas Gerais, Brasil</h4>
           <p>
             Sou um jovem desenvolvedor front-end autodidata, apaixonado por transformar ideias em realidade com minhas habilidades em React e outras tecnologias.
           </p>

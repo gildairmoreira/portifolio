@@ -24,16 +24,3 @@ export default function ItensNavegação()
         
     )
 }
-/* <ul>
-            <li className={styles.hoverable}>Sobre mim</li>
-            <li className={styles.hoverable}>Skills</li>
-            <li className={styles.hoverable}>Formação</li>
-            <li className={styles.hoverable}>Projetos</li>
-            <li className={styles.hoverable}>Contato</li>
-
-            <a href='/'>
-                <LogoBrasil />
-                <SetaDown />
-            </a>
-
-        </ul> */

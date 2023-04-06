@@ -10,13 +10,13 @@ import LogoSass from 'assets/componentesImagens/skills/LogoSass';
 import LogoBootstrap from 'assets/componentesImagens/skills/LogoBootstrap';
 import LogoWP from 'assets/componentesImagens/skills/LogoWP';
 
-export interface Skill
+export interface SkillProps
 {
     title: string;
     image: React.ReactElement;
 }
 
-export const skills: Skill[] = [
+export const skills: SkillProps[] = [
     { title: "HTML", image: <LogoHtml /> },
     { title: "CSS", image: <LogoCss /> },
     { title: "JavaScript", image: <LogoJs /> },
@@ -37,11 +37,11 @@ const SkillList: React.FC = () =>
                 <div
                     key={index}
                     className={`${style.skill} ${index === 0 ? style.first : ""} 
-              ${index === 4 ? style[ 'last-of-first-row' ] : ""}
-              ${index === 5 ? style[ 'first-of-second-row' ] : ""}
-              ${index === skills.length - 1 ? style.last : ""}
-          `}
-                >
+                    ${index === skills.length - 1 ? style.last : ""}
+                    `}
+                    //${index === 4 ? style[ 'last-of-first-row' ] : ""} //Barra azul em Cada Linha de SKILS
+                   // ${index === 5 ? style[ 'first-of-second-row' ] : ""}
+                    >
                     <div className={style.skill__image}>
                         {skill.image}
                     </div>

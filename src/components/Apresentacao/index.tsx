@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './apresentacao.module.scss';
-import Botao from 'assets/common/Botoes/botao'
 import LogoLinkedin from 'assets/componentesImagens/LogoLinkedin'
 import ImagemApresentacao from 'assets/componentesImagens/ImagemApresentaçao'
 import LogoGitHub from 'assets/componentesImagens/LogoGitHub'
+import Botao from 'assets/common/Botao/botao';
 
 export default function Apresentacao()
 {

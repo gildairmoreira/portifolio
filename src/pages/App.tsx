@@ -5,17 +5,19 @@ import Skills from "components/Skills";
 import FormacaoAcademica from "components/Formacao";
 import './reset.module.scss'
 import Projetos from "components/Projetos";
+import Rodape from "components/Rodape";
 
 function App()
 {
   return (
     <div className="App">
-      <Cabecalho />
+      <Cabecalho/>
       <Apresentacao />
       <SobreMim />
       <Skills/>
       <FormacaoAcademica/>
       <Projetos/>
+      <Rodape/>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import LogoBrasil from 'assets/componentesImagens/LogoBrasil'
-import SetaDown from 'assets/componentesImagens/SetaDown'
 import styles from './itensNavegacao.module.scss'
-
+import { AiFillCaretDown } from 'react-icons/ai'
 
 
 export default function ItensNavegação()
@@ -17,7 +16,7 @@ export default function ItensNavegação()
 
             <a href='/'>
                 <LogoBrasil />
-                <SetaDown />
+                <AiFillCaretDown className={styles.setaDown} />
             </a>
 
         </ul>

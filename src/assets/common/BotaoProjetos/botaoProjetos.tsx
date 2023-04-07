@@ -1,33 +1,23 @@
 import React from 'react'
 import styles from './botaoProjetos.module.scss'
-import LogoGitHub from 'assets/componentesImagens/LogoGitHub';
-import LogoLink from 'assets/componentesImagens/LogoLink';
+import {FiLink,FiGithub} from 'react-icons/fi'
+
 
 interface BotaoProjetosProps{
     linkRepo:string;
     linkVer:string;
-    gradienteVer:string;
-    gradienteRepo:string;
 }
 
-export default function BotaoProjetos({ linkRepo, linkVer, gradienteVer, gradienteRepo }:BotaoProjetosProps)
+export default function BotaoProjetos({ linkRepo, linkVer}:BotaoProjetosProps)
 {
-    const BorderStyleVer = {
-        background: `${gradienteVer}`
-    }
-    const BorderStyleRepo = {
-        background: `${gradienteRepo}`
-    }
-
-
     return (
         <div className={styles.projeto__botoes}>
-            <a href={linkVer} className={styles.projeto__linkver} style={BorderStyleVer}>
-                <span className={styles.icone}><LogoLink/></span>
+            <a href={linkVer} className={styles.projeto__linkver} target='_blank' rel="noreferrer">
+                <span className={styles.icone}><FiLink className={styles.LogoLink} /></span>
                 <span className={styles.text}>Visualizar</span>
             </a>
-            <a href={linkRepo} className={styles.projeto__linkrepo} style={BorderStyleRepo}>
-                <span className={styles.icone}><LogoGitHub/></span>
+            <a href={linkRepo} className={styles.projeto__linkrepo} target='_blank' rel="noreferrer">
+                <span className={styles.icone}><FiGithub className={styles.LogoGitHub} /></span>
                 <span className={styles.text}>Repositório</span>
                 
             </a>

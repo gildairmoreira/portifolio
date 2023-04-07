@@ -1,9 +1,11 @@
 import Botao from 'assets/common/Botao/botao'
-import LogoDowload from 'assets/componentesImagens/LogoDowload'
-import LogoEmail from 'assets/componentesImagens/LogoEmail'
 import MinhaFoto from 'assets/componentesImagens/MinhaFoto'
 import React from 'react'
 import styles from './sobreMim.module.scss'
+
+import { FiDownloadCloud } from 'react-icons/fi'
+import { AiOutlineMail } from 'react-icons/ai'
+
 
 export default function SobreMim()
 {
@@ -38,8 +40,8 @@ export default function SobreMim()
           </p>
         </div>
         <div className={styles.container__botoes}>
-          <Botao icon={<LogoDowload />} text='Currículo' gradient='linear-gradient(236deg, rgba(26,35,44,1) 0%, rgba(0,215,255,1) 100%)' url='' />
-          <Botao icon={<LogoEmail />} text='E-mail' gradient='linear-gradient(180deg, #1a232c, #ffffff 100%)' url='' />
+          <Botao icon={<FiDownloadCloud className={styles.LogoDownload} />} text='Currículo' gradient='linear-gradient(236deg, rgba(26,35,44,1) 0%, rgba(0,215,255,1) 100%)' url='#curicoloooooooooooooooooooooooooooooo' />
+          <Botao icon={<AiOutlineMail className={styles.LogoEmail} />} text='E-mail' gradient='linear-gradient(180deg, #1a232c, #ffffff 100%)' url="mailto:contato.gildair@gmail.com?subject=Interesse%20em%20seus%20servi%C3%A7os%20de%20programador%20Front-End" />
         </div>
 
 

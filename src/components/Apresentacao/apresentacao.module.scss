@@ -5,7 +5,7 @@
   background: linear-gradient(
     180deg,
     #1a232c 34.74%,
-    rgba(16, 215, 226, 0) 88%
+    rgb(16, 215, 226) 216.09%
   );
   color: $branco;
   font-family: $fonte-inter;
@@ -39,6 +39,14 @@
     margin:0 auto;
     margin-left:-10px;
     flex-direction: row;
+    .LogoLinkedin{
+      color: $branco;
+      font-size: 25px;
+    }
+    .LogoGitHub{
+      color: $branco;
+      font-size: 25px;
+    }
 
   }
 

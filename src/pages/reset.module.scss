@@ -1,6 +1,14 @@
 *, *:before, *:after{
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+        width: 10px;
+        background: #1b1b1b;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #00d2df;
+    border-radius: 5px;
+}
 html body{
   background: linear-gradient(359.77deg, #10d7e2 0.17%, #1a232c 80.97%);
   background-blend-mode: darken;

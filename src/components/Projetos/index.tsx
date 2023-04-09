@@ -86,7 +86,7 @@ const projetos: ProjetoProps[] = [
 export default function Projetos():ReactElement
 {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='projetos'>
       <h2 className={styles.projeto__titulo}>Projetos</h2>
 
         <section className={styles.container}>

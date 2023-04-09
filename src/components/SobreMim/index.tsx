@@ -10,7 +10,7 @@ import { AiOutlineMail } from 'react-icons/ai'
 export default function SobreMim()
 {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='sobre'>
 
       <aside className={styles.container__left}>
         <div className={styles.foto}>

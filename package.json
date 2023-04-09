@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.6",
     "sass": "^1.60.0"
   }
 }

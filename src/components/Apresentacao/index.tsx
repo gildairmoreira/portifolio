@@ -9,7 +9,7 @@ import { FiLinkedin } from 'react-icons/fi'
 export default function Apresentacao()
 {
   return (
-    <main className={style.container}>
+    <main className={style.container} id='home'>
       <div className={style.container__left}>
 
         <div className={style.titulos}>

@@ -5,17 +5,19 @@ import Botao from 'assets/common/Botao/botao';
 
 import { FiGithub } from 'react-icons/fi'
 import { FiLinkedin } from 'react-icons/fi'
+import { useTranslation } from 'react-i18next';
 
 export default function Apresentacao()
 {
+  const {t} = useTranslation()
   return (
     <main className={style.container} id='home'>
       <div className={style.container__left}>
 
         <div className={style.titulos}>
-          <h2>Olá, eu sou</h2>
-          <h1 className={style.container__h1}>Gildair moreira</h1>
-          <h2>Desenvolvedor Front-end .</h2>
+          <h2>{t('Ola')}</h2>
+          <h1 className={style.container__h1}>{t('Nome')}</h1>
+          <h2>{t('Profisao')}</h2>
         </div>
 
         <div className={style.botoes}>

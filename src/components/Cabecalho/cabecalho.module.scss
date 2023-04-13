@@ -1,5 +1,8 @@
 @import "assets/styles/variaveis.scss";
 
+* {
+  user-select: none;
+}
 .fixed {
   background: #ffffff !important;
   position: sticky;

@@ -6,12 +6,13 @@ import { Link } from 'react-scroll';
 import { AiFillCaretDown } from 'react-icons/ai';
 import SeletorLingua from './itensNav/seletor-linguagem/SeletorLingua';
 import { useTranslation } from "react-i18next";
-
+import { FaBars } from 'react-icons/fa';
 
 
 export default function Cabecalho()
 {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+
 
   const [ isFixed, setIsFixed ] = useState(false);
   function handleScroll()
@@ -26,8 +27,14 @@ export default function Cabecalho()
   }
 
   window.addEventListener('scroll', handleScroll);
-  
+
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
+  const [ MenuAberto, setMenuAberto ] = useState(false);
+
+  function ClickMenuH()
+  {
+    setMenuAberto(!MenuAberto);
+  }
 
   function handleClick()
   {
@@ -48,14 +55,76 @@ export default function Cabecalho()
           <h3>{t('Portifolio')}</h3>
         </div>
       </Link>
-      <nav className={styles.cabecalho__navegação}>
-        <ItensNavegação />
-        <div className={styles.container__idioma} onClick={handleClick}>
-          <SeletorLingua isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-          <AiFillCaretDown className={`${styles.setaDown} ${isMenuOpen ? styles.aberto : ''}`} />
-        </div>
-      </nav>
 
+      <div className={styles.container__right}>
+        <div className={styles.menuHamburguer}>
+          <FaBars onClick={ClickMenuH} />
+          <ul className={`${styles.menu} ${!MenuAberto ? styles.menu__aberto : ''}`}>
+            <Link
+              activeClass={styles.active}
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className={styles.item__link}
+            >
+              <li>{t("Inicio")}</li>
+            </Link>
+            <Link
+              activeClass={styles.active}
+              to="sobre"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className={styles.item__link}
+            >
+              <li>{t("Sobre mim")}</li>
+            </Link>
+            <Link
+              activeClass={styles.active}
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className={styles.item__link}
+            >
+              <li>{t("Skills")}</li>
+            </Link>
+            <Link
+              activeClass={styles.active}
+              to="formacao"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className={styles.item__link}
+            >
+              <li>{t("Formação")}</li>
+            </Link>
+            <Link
+              activeClass={styles.active}
+              to="projetos"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className={styles.item__link}
+            >
+              <li>{t("Projetos")}</li>
+            </Link>
+          </ul>
+        </div>
+        <nav className={styles.cabecalho__navegação}>
+          <ItensNavegação />
+          <div className={styles.container__idioma} onClick={handleClick}>
+            <SeletorLingua isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            <AiFillCaretDown className={`${styles.setaDown} ${isMenuOpen ? styles.aberto : ''}`} />
+          </div>
+        </nav>
+      </div>
     </header>
   )
 }

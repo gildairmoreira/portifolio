@@ -75,7 +75,7 @@ export default function Carrousel()
                             <h3>{certificado.curso}</h3>
                             <p>{certificado.data}</p>
                         </span>
-                        <a href={certificado.link} target='_blank' className="botao-link" rel="noreferrer">Ver Certificado</a>
+                        <a href={certificado.link} target='_blank' className="botao-link" rel="noreferrer">{t('Ver Certificado')}</a>
                     </div>
                 </SwiperSlide>
             ))}

@@ -3,12 +3,13 @@ import LogoBrasil from 'assets/componentesImagens/LogoBrasil';
 import LogoUSA from 'assets/componentesImagens/LogoUSA';
 import LogoSPA from 'assets/componentesImagens/LogoSPA';
 import styles from './linguagem.module.scss';
-import i18n from 'i18n/i18n.js';
+import i18n from 'i18n/i18n';
 
 interface ILanguageMenuProps
 {
     handleLanguageChange: (language: string) => void;
     selectedLanguage: string;
+    changeLanguage: (language: string) => void;
 }
 
 interface ISeletorLinguaProps
@@ -17,7 +18,7 @@ interface ISeletorLinguaProps
     setIsMenuOpen: (isMenuOpen: boolean) => void;
 }
 
-const LanguageMenu = ({ handleLanguageChange, selectedLanguage }: ILanguageMenuProps) =>
+const LanguageMenu = ({ handleLanguageChange, selectedLanguage,changeLanguage }: ILanguageMenuProps) =>
 {
     
     return (
@@ -35,7 +36,7 @@ const LanguageMenu = ({ handleLanguageChange, selectedLanguage }: ILanguageMenuP
                     {
                         e.preventDefault();
                         handleLanguageChange('pt-br');
-                        //aqui sera chamada a função para mudar a lingua para portugues
+                        changeLanguage('pt')
                     }}
                     aria-label='Selecionar idioma português do Brasil'
                 >
@@ -49,7 +50,7 @@ const LanguageMenu = ({ handleLanguageChange, selectedLanguage }: ILanguageMenuP
                     {
                         e.preventDefault();
                         handleLanguageChange('en-us');
-                        //aqui sera chamada a função para mudar a lingua para ingles
+                        changeLanguage('en')
                     }}
                     aria-label='Selecionar idioma inglês'
                 >
@@ -62,7 +63,7 @@ const LanguageMenu = ({ handleLanguageChange, selectedLanguage }: ILanguageMenuP
                     {
                         e.preventDefault();
                         handleLanguageChange('es-es');
-                        //aqui sera chamada a função para mudar a lingua para espanhol
+                        changeLanguage('es')
                     }}
                     aria-label='Selecionar idioma espanhol'
                 >
@@ -84,7 +85,8 @@ export default function SeletorLingua({ isMenuOpen, setIsMenuOpen }: ISeletorLin
     {
         setSelectedLanguage(language);
         setIsMenuOpen(false);
-        console.log('Idioma portuguesaaaaassss')
+        i18n.changeLanguage(language);
+        setSelectedLanguage(language);
     };
 
     
@@ -109,6 +111,7 @@ export default function SeletorLingua({ isMenuOpen, setIsMenuOpen }: ISeletorLin
                     <LanguageMenu
                         handleLanguageChange={handleLanguageChange}
                         selectedLanguage={selectedLanguage}
+                        changeLanguage={i18n.changeLanguage}
                     />
                 )}
             </li>

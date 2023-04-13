@@ -4,9 +4,9 @@ import resources from "./locales/resourses";
 
 
 i18n.use(initReactI18next).init({
-  lng: "es",
+  lng: "pt",
   resources,
-  fallbackLng: "en",
+  fallbackLng: "pt",
   interpolation: {
     escapeValue: false,
   },

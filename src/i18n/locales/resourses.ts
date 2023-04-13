@@ -19,6 +19,7 @@ const resources = {
             'Email': 'Email',
             'Curriculo': 'CV',
 
+            'Ver Certificado': 'View certificate',
             'Formação Front-end': 'Front-end Training',
             'date1': '11/09/2022',
             
@@ -60,6 +61,25 @@ const resources = {
 
             'Curso Introdutorio de Figma': 'Introductory Figma Course',
             'date14': '03/15/2023',
+
+            'Tecnologias': 'Technologies',
+            'organo': 'organo',
+            'cine tag': 'cine tag',
+            'blog pessoal': 'personal blog',
+            'alura space': 'alura space',
+            'moni bank': 'moni bank',
+            'mochila de viagem': 'travel backpack',
+            'numero secreto': 'secret number',
+            'apeperia': 'apeperia',
+            'fruta & fruto': 'fruit & fruto',
+            'Visualizar': 'View',
+            'Repositório': "Repository",
+
+            'Criado utilizando': 'Created usinge',
+            'e': 'and',
+            'Desenvolvido': 'developed',
+            'Por': 'by',
+            
         },
     },
 
@@ -84,7 +104,7 @@ const resources = {
             'Email': 'Email',
             'Curriculo': 'CV',
 
-
+            'Ver Certificado': 'Ver Certificado',
             'Formação Front-end': 'Formación de Front-end',
             'date1': '09/11/2022',
 
@@ -127,6 +147,24 @@ const resources = {
             'Curso Introdutorio de Figma': 'Curso Introductorio de Figma',
             'date14': '15/03/2023',
 
+
+            'Tecnologias': 'Tecnologías',
+            'organo': 'organo',
+            'cine tag': 'cine tag',
+            'blog pessoal': 'blog personal',
+            'alura space': 'alura space',
+            'moni bank': 'moni bank',
+            'mochila de viagem': 'mochila de viaje',
+            'numero secreto': 'número secreto',
+            'apeperia': 'apeperia',
+            'fruta & fruto': 'fruta & fruto',
+            'Visualizar': 'Ver',
+            'Repositório': "Repositorio",
+
+            'Criado utilizando': 'Creado utilizando',
+            'e': 'y',
+            'Desenvolvido': 'desarrollado',
+            'Por': 'Por',
         },
     },
 
@@ -150,6 +188,7 @@ const resources = {
             'Email':'E-mail',
             'Curriculo': 'Currículo',
 
+            'Ver Certificado':'Ver Certificado',
             'Formação Front-end': 'Formação Front-end',
             'date1': '09/11/2022',
 
@@ -192,6 +231,24 @@ const resources = {
             'Curso Introdutorio de Figma': 'Curso Introdutorio de Figma',
             'date14': '15/03/2023',
 
+
+            'Tecnologias': 'Tecnologias',
+            'organo':'organo',
+            'cine tag':'cine tag',
+            'blog pessoal':'blog pessoal',
+            'alura space':'alura space',
+            'moni bank':'moni bank',
+            'mochila de viagem':'mochila de viagem',
+            'numero secreto':'número secreto',
+            'apeperia':'apeperia',
+            'fruta & fruto':'fruta & fruto',
+            'Visualizar':'Visualizar',
+            'Repositório': "Repositório",
+
+            'Criado utilizando': 'Criado utilizando',
+            'e': 'e',
+            'Desenvolvido': 'Desenvolvido',
+            'Por': 'Por',
         },
     },
 }

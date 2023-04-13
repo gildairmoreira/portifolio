@@ -1,10 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import styles from './itensNavegacao.module.scss'
-import { AiFillCaretDown } from 'react-icons/ai'
 import { Link } from "react-scroll";
 
 
 export default function ItensNavegação()
 {
+    const {t} = useTranslation()
 
     return (
         <ul className={styles.lista__links}>
@@ -16,8 +17,9 @@ export default function ItensNavegação()
                     smooth={true}
                     offset={-70}
                     duration={500}
+                    className={styles.item__link}
                 >
-                    <p>Inicio</p>
+                    <p>{t("Inicio")}</p>
                 </Link>
             </li>
             <li className={styles.item__lista}>
@@ -28,8 +30,9 @@ export default function ItensNavegação()
                     smooth={true}
                     offset={-70}
                     duration={500}
+                    className={styles.item__link}
                 >
-                    <p>Sobre mim</p>
+                    <p>{t("Sobre mim")}</p>{/* {t("Sobre mim")} */}
                 </Link>
             </li>
             <li className={styles.item__lista}>
@@ -40,8 +43,9 @@ export default function ItensNavegação()
                     smooth={true}
                     offset={-70}
                     duration={500}
+                    className={styles.item__link}
                 >
-                    <p>Skills</p>
+                    <p>{t("Skills")}</p>
                 </Link>
             </li>
             <li className={styles.item__lista}>
@@ -52,8 +56,9 @@ export default function ItensNavegação()
                     smooth={true}
                     offset={-70}
                     duration={500}
+                    className={styles.item__link}
                 >
-                    <p>Formação</p>
+                    <p>{t("Formação")}</p>
                 </Link>
             </li>
             <li className={styles.item__lista}>
@@ -64,9 +69,10 @@ export default function ItensNavegação()
                     smooth={true}
                     offset={-70}
                     duration={500}
+                    className={styles.item__link}
                 >
 
-                    <p>Projetos</p>
+                   <p>{t("Projetos")}</p>
                 </Link>
             </li>
 

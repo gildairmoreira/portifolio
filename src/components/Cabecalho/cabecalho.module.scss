@@ -6,16 +6,15 @@
   top: 0;
   left: 0;
   right: 0;
-  animation: fadeIn 1s ease-in-out ;
+  animation: fadeIn 1s ease-in-out;
   height: 10vh !important;
-   z-index: 100;
-   .logo h3{
+  z-index: 100;
+  .logo h3 {
     display: none;
-   }
-   li {
+  }
+  li {
     color: $preto;
-   }
-
+  }
 }
 .cabecalho {
   background: rgba(255, 255, 255, 0.1);
@@ -29,12 +28,12 @@
   border-bottom: 1px solid $azul-detail;
   transition: 1.2s all;
   
-  
+
   .logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     img {
       cursor: pointer;
       width: 62px;
@@ -52,20 +51,28 @@
 
   nav {
     display: flex;
-    .container__idioma{
+
+    .container__idioma {
       display: flex;
       align-items: center;
-      .setaDown{
-        width: 50%;
+      cursor: pointer;
+      
+      .setaDown {
+        transition: transform .6s ease-in-out;
+      }
+      .aberto {
+        transform: rotate(180deg);
+        color: $azul-detail;
       }
     }
+
     ul {
       color: $branco;
       display: flex;
       justify-content: space-around;
       align-items: center;
       transition: 1s all;
-      
+
       li p {
         font-family: $fonte-raleway;
         font-weight: 500;
@@ -82,8 +89,6 @@
           animation: fade-in 0.3s ease-in;
         }
       }
-
-        
     }
   }
 }
@@ -96,12 +101,3 @@
     transform: scaleX(1);
   }
 }
-/*0% {                                    
-      opacity: 0;
-      transform: translateX(-10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }  Dentro pra fora
-    */

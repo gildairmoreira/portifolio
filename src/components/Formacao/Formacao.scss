@@ -97,15 +97,14 @@
         line-height: 19px;
       }
     }
-    &:hover .textos__bloco{
+    &:hover .textos__bloco {
       opacity: 0;
       transform: translateY(100%);
       transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
     .botao-link {
-        position: absolute;
-        top: 80%;
-      
+      position: absolute;
+      top: 80%;
 
       display: flex;
       align-items: center;
@@ -130,15 +129,15 @@
       color: rgb(0, 138, 138);
       text-shadow: 0 1px #fff;
 
-       opacity: 0;
-        transform: translateY(100%);
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
-    &:hover .botao-link{
-          opacity: 1;
-          transform: translateY(0%);
-          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
+    &:hover .botao-link {
+      opacity: 1;
+      transform: translateY(-20%);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
 
     .botao-link:hover {
       box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
@@ -162,5 +161,18 @@
   .swiper-button-next {
     position: absolute !important;
     margin-left: 50px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .formacao__academica {
+    &-bloco {
+      & .botao-link {
+        opacity: 1;
+        transform: translateY(0%);
+        position: relative;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }

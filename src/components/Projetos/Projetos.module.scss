@@ -91,3 +91,35 @@
     }
   }
 }
+
+
+@media (max-width: 1178px){
+  .container{
+    .projeto__titulo{
+      font-size: 1.5rem;
+    }
+    .projetos{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+}
+@media (max-width: 788px){
+  .container{
+    .projetos{
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 396px){
+  .container{
+    padding: 0;
+    .projetos{
+      .projeto{
+        padding:1rem .5rem;
+      }
+    }
+  }
+}

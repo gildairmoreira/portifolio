@@ -9,6 +9,7 @@ import LogoAlura from 'assets/componentesImagens/certificados/CertificadoAlura';
 import React from 'react'
 import LogoPbh from 'assets/componentesImagens/certificados/CertificadoPbh';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 
 
 interface FormacaoAcademicaProps
@@ -22,7 +23,6 @@ interface FormacaoAcademicaProps
 
 export default function Carrousel()
 {
-
     const { t } = useTranslation()
 
     const Certificados: FormacaoAcademicaProps[] = [
@@ -55,13 +55,15 @@ export default function Carrousel()
         { id: 14, image: <LogoAlura />, curso: t('Curso Introdutorio de Figma'), data: t('date14'), link: 'https://cursos.alura.com.br/user/gildair/course/figma-construindo-layout-primeiro-site-mobile/certificate' },
     ];
 
+    const eMobile = useMediaQuery({maxWidth:768})
+    const slidesNaTela = eMobile ? 1: 3;
 
     return (
         <Swiper
             modules={[ Navigation, Pagination, Scrollbar, A11y ]}
             navigation
             spaceBetween={0}
-            slidesPerView={3}
+            slidesPerView={slidesNaTela}
             onSwiper={swiper => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             className="swiper-pagination-top"

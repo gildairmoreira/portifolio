@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 import { AiFillCaretDown } from 'react-icons/ai';
 import SeletorLingua from './itensNav/seletor-linguagem/SeletorLingua';
 import { useTranslation } from "react-i18next";
-import { FaBars } from 'react-icons/fa';
+import { VscMenu } from 'react-icons/vsc'
 
 
 export default function Cabecalho()
@@ -58,7 +58,7 @@ export default function Cabecalho()
 
       <div className={styles.container__right}>
         <div className={styles.menuHamburguer}>
-          <FaBars onClick={ClickMenuH} />
+          <VscMenu onClick={ClickMenuH} />
           <ul className={`${styles.menu} ${!MenuAberto ? styles.menu__aberto : ''}`}>
             <Link
               activeClass={styles.active}

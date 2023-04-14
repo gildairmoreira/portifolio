@@ -15,6 +15,9 @@
   li {
     color: $preto;
   }
+  .menuHamburguer{
+    color: $preto!important;
+  }
 }
 .cabecalho {
   user-select: none;
@@ -126,7 +129,7 @@
     .container__right {
       .menuHamburguer {
         font-size: 1rem;
-        color: $preto;
+        color: $branco;
         display: block;
         .menu {
           

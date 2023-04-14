@@ -95,3 +95,41 @@
     }
   }
 }
+
+
+@media (max-width: 1050px) {
+  .skills{
+    padding: 2rem 4.75rem 4rem 4.75rem;
+    .skills__grid{
+      column-gap: 2rem;
+      row-gap: 2rem;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .skills{
+    padding: 2rem 3.75rem 4rem 3.75rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills{
+    padding: 2rem 1.75rem 4rem 1.75rem;
+  }
+}
+
+@media (max-width: 590px){
+  .skills{
+    .skills__grid{
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 2rem;
+      width: 85%;
+      .skill{
+        .skill__title{
+            opacity: 1;
+          }
+
+      }
+    }
+  }
+}

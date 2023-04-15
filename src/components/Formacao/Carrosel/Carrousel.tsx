@@ -10,6 +10,7 @@ import React from 'react'
 import LogoPbh from 'assets/componentesImagens/certificados/CertificadoPbh';
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
+import LogoSenai from 'assets/componentesImagens/certificados/CertificadoSenai';
 
 
 interface FormacaoAcademicaProps
@@ -53,6 +54,8 @@ export default function Carrousel()
         { id: 13, image: <LogoAlura />, curso: t('Curso GIT E GITHUB'), data: t('date13'), link: 'https://cursos.alura.com.br/user/gildair/course/git-github-repositorio-commit-versoes/certificate' },
 
         { id: 14, image: <LogoAlura />, curso: t('Curso Introdutorio de Figma'), data: t('date14'), link: 'https://cursos.alura.com.br/user/gildair/course/figma-construindo-layout-primeiro-site-mobile/certificate' },
+
+        { id: 15, image: <LogoSenai />, curso: t('Programação Front-End'), data: t('date15'), link: 'https://drive.google.com/file/d/1uuWtHhSI9io-hKiMXXsIcRKZOse_3vYE/view' },
     ];
 
     const eMobile = useMediaQuery({maxWidth:768})

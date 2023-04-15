@@ -62,6 +62,9 @@ const resources = {
             'Curso Introdutorio de Figma': 'Introductory Figma Course',
             'date14': '03/15/2023',
 
+            'Programação Front-End': 'Programming Front-end',
+            'date15': '04/14/2023',
+
             'Tecnologias': 'Technologies',
             'organo': 'organo',
             'cine tag': 'cine tag',
@@ -147,6 +150,8 @@ const resources = {
             'Curso Introdutorio de Figma': 'Curso Introductorio de Figma',
             'date14': '15/03/2023',
 
+            'Programação Front-End': 'Programación Front-end',
+            'date15': '14/04/2023',
 
             'Tecnologias': 'Tecnologías',
             'organo': 'organo',
@@ -230,6 +235,9 @@ const resources = {
 
             'Curso Introdutorio de Figma': 'Curso Introdutorio de Figma',
             'date14': '15/03/2023',
+
+            'Programação Front-End': 'Programação Front-End',
+            'date15': '14/04/2023',
 
 
             'Tecnologias': 'Tecnologias',

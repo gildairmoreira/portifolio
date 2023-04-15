@@ -1,0 +1,45 @@
+@import "assets/styles/variaveis.scss";
+
+.button {
+  $border-width: 2px;
+  $border-radius: 5px;
+
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $fonte-inter;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $branco;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: $border-radius;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  .text {
+    margin-left: 1rem;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+    background: #ffffff;
+    transform: translateY(-3px);
+    transition: background 0.5s ease-in-out;
+  }
+
+  &:active {
+    box-shadow: none; /* Remove a sombra quando o botão é clicado */
+    transform: translateY(1px); /* Empurra o botão para baixo */
+    border: 2px solid rgba(0, 0, 0, 0.267); /* Altera a cor da borda do botão */
+    background: darken(rgba(0, 0, 0, 0.349), 10%); /* Escurece um pouco a cor de fundo do botão */
+  }
+}

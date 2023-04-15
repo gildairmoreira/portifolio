@@ -1,0 +1,135 @@
+@import "assets/styles/variaveis.scss";
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $fundo-escuro;
+  text-align: center;
+  padding: 2rem 8.75rem 4rem 8.75rem;
+
+  .titulo__principal {
+    color: $azul-titulos;
+    -webkit-text-stroke: 1px $preto;
+    font-family: $fonte-raleway;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+
+  .skills__grid {
+    display: grid;
+    
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 4.25rem;
+    column-gap: 4.25rem;
+    
+    width: 100%;
+    height: 50%;
+
+    .skill {
+      position: relative;
+      overflow: hidden;
+      padding-top: 100%;
+      background: linear-gradient(
+        131.35deg,
+        #c4d6d4 23.82%,
+        rgba(0, 0, 0, 0) 118.07%
+      );
+      mix-blend-mode: normal;
+      backdrop-filter: blur(2px);
+      border-radius: 1rem;
+
+      &.first {
+        border-left: .75rem solid $azul-detail;
+      }
+
+      &.last {
+        border-right: .75rem solid $azul-detail;
+      }
+      
+      &.last-of-first-row {
+        border-right: .75rem solid $azul-detail;
+      }
+
+      &.first-of-second-row {
+        border-left: .75rem solid $azul-detail;
+    }
+
+      .skill__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+          max-width: 45%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .skill__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: .5rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: $azul-detail;
+        font-family: $fonte-raleway;
+        font-weight: 500;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        
+      }
+      &:hover .skill__title{
+          opacity: 1;
+          transform: translateY(1%);
+        }
+    }
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .skills{
+    padding: 2rem 4.75rem 4rem 4.75rem;
+    .skills__grid{
+      column-gap: 2rem;
+      row-gap: 2rem;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .skills{
+    padding: 2rem 3.75rem 4rem 3.75rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills{
+    padding: 2rem 1.75rem 4rem 1.75rem;
+  }
+}
+
+@media (max-width: 590px){
+  .skills{
+    .skills__grid{
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 2rem;
+      width: 85%;
+      .skill{
+        .skill__title{
+            opacity: 1;
+          }
+
+      }
+    }
+  }
+}

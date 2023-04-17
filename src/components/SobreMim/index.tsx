@@ -33,7 +33,7 @@ export default function SobreMim()
         </div>
 
         <div className={styles.container__botoes}>
-          <Botao icon={<FiDownloadCloud className={styles.LogoDownload} />} text={t('Curriculo')} gradient='linear-gradient(236deg, rgba(26,35,44,1) 0%, rgba(0,215,255,1) 100%)' url='#curicoloooooooooooooooooooooooooooooo' />
+          <Botao icon={<FiDownloadCloud className={styles.LogoDownload} />} text={t('Curriculo')} gradient='linear-gradient(236deg, rgba(26,35,44,1) 0%, rgba(0,215,255,1) 100%)' url='https://drive.google.com/file/d/173lO1BNQa_abjr2BS0H45bkAs0HO0YSr/view?usp=sharing' target='_blank' />
           <Botao icon={<AiOutlineMail className={styles.LogoEmail} />} text={t('Email')} gradient='linear-gradient(180deg, #1a232c, #ffffff 100%)' url="mailto:contato.gildair@gmail.com?subject=Interesse%20em%20seus%20servi%C3%A7os%20de%20programador%20Front-End" />
         </div>
 

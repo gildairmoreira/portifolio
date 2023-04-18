@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+### Meu Portfólio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/gildairmoreira/portifolio)
+![GitHub](https://img.shields.io/github/license/gildairmoreira/portifolio)
 
-## Available Scripts
+Este é o meu portfólio pessoal, desenvolvido com as tecnologias React, HTML, TypeScript e SCSS (Sass). Também foram utilizadas as bibliotecas React Icons, i18next, React Swiper e React Awesome Reveal.
 
-In the project directory, you can run:
+![Screenshot](./screenshot.jpg)
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React](https://reactjs.org/)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SCSS (Sass)](https://sass-lang.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [i18next](https://www.i18next.com/)
+- [React Swiper](https://swiperjs.com/react)
+- [React Awesome Reveal](https://www.npmjs.com/package/react-awesome-reveal)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Funcionalidades
 
-### `npm test`
+- Página inicial com informações sobre mim e meus projetos
+- Seção de projetos, com links para ver mais detalhes e acesso aos repositórios no GitHub
+- Seção de habilidades técnicas
+- Seção de contato, com links para minhas redes sociais e e-mail
+- Tradução para os idiomas inglês e espanhol utilizando a biblioteca i18next
+- Animações com a biblioteca React Awesome Reveal
+- Responsividade para dispositivos móveis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como Rodar o Projeto
 
-### `npm run build`
+Para rodar o projeto em ambiente de desenvolvimento, siga os passos abaixo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório para a sua máquina local
+2. Abra a pasta do projeto no terminal e execute o comando `npm install` para instalar as dependências
+3. Execute o comando `npm start` para rodar o projeto em modo de desenvolvimento
+4. Abra o navegador e acesse o endereço `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Autor
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Esse projeto foi desenvolvido por [seu nome aqui]. Entre em contato comigo pelo e-mail [seu email aqui] ou pelas minhas redes sociais (links na seção de contato do site).
 
-### `npm run eject`
+## Licença
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+README criado por Gildair.

@@ -1,11 +1,18 @@
-### Meu Portfólio
+# Portifolio Gildair moreira
 
-![GitHub repo size](https://img.shields.io/github/repo-size/gildairmoreira/portifolio)
-![GitHub](https://img.shields.io/github/license/gildairmoreira/portifolio)
+Rápida descrição do objetivo de fazer esse projeto
 
-Este é o meu portfólio pessoal, desenvolvido com as tecnologias React, HTML, TypeScript e SCSS (Sass). Também foram utilizadas as bibliotecas React Icons, i18next, React Swiper e React Awesome Reveal.
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **portifolio**
+| :label: Tecnologias | React, HTML, TypeScript e SCSS (Sass)
+| :rocket: URL         | https://portifolio-gildair.vercel.app
+| :fire: Desafio     | EU ME DESAFIEI
+### Detalhes do projeto
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![](./screenshot.jpg#vitrinedev)
 
-![Screenshot](./screenshot.jpg)
+
 
 ## Tecnologias Utilizadas
 

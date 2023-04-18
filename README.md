@@ -23,7 +23,7 @@ Este é o meu portfólio pessoal, desenvolvido com as tecnologias React, HTML, T
 - Página inicial com informações sobre mim e meus projetos
 - Seção de projetos, com links para ver mais detalhes e acesso aos repositórios no GitHub
 - Seção de habilidades técnicas
-- Seção de contato, com links para minhas redes sociais e e-mail
+- Seção de com informações sobre mim com links para minhas redes sociais e e-mail
 - Tradução para os idiomas inglês e espanhol utilizando a biblioteca i18next
 - Animações com a biblioteca React Awesome Reveal
 - Responsividade para dispositivos móveis

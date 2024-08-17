@@ -12,7 +12,7 @@ const resources = {
             'Nome': 'Gildair Moreira',
             'Profisao': 'a Front-End Developer .',
 
-            'Estado': 'Jaboticatubas MG, Brazil',
+            'Estado': 'Belo Horizonte MG, Brazil',
             /* 1 */'sobreParagrafo1': ' I am Gildair Moreira, a front-end developer passionate about turning ideas into reality. My journey as a programmer began a few years ago with modifications to third-party apps, when I started learning the necessary skills to build web and mobile applications on my own. Since then, I have been improving my skills in React and other technologies, and turning my ideas into successful projects',
             /* 2 */'sobreParagrafo2': 'Although I do not have formal experience in the industry, I have dedicated myself intensely to learning and have been able to master essential skills in just 8 months. My personal and collaborative projects are examples of my ability to work independently and in teams, to identify and solve problems, and to build innovative solutions.',
             /* 3 */'sobreParagrafo3': "I am seeking opportunities to contribute to a dedicated team in a challenging work environment, to grow professionally, and to continue to improve my skills. My goal is always to deliver high-quality work, with attention to detail and user needs, and to build products that have a positive impact on people's lives.",
@@ -100,7 +100,7 @@ const resources = {
             'Profisao': 'Desarrollador Front-End .',
             
 
-            'Estado': 'Jaboticatubas MG, Brasil',
+            'Estado': 'Belo Horizonte MG, Brasil',
             /* 1 */'sobreParagrafo1': 'Soy Gildair Moreira, un desarrollador front-end apasionado por convertir ideas en realidad. Mi trayectoria como programador comenzó hace algunos años con modificaciones en aplicaciones de terceros, cuando empecé a aprender por mi cuenta las habilidades necesarias para construir aplicaciones web y móviles. Desde entonces, he estado perfeccionando mis habilidades en React y otras tecnologías, y convirtiendo mis ideas en proyectos exitosos.',
             /* 2 */'sobreParagrafo2': 'Aunque no tengo experiencia formal en la industria, me he dedicado intensamente al aprendizaje y he logrado dominar habilidades esenciales en solo 8 meses. Mis proyectos personales y colaborativos son ejemplos de mi capacidad para trabajar de forma independiente y en equipo, para identificar y resolver problemas, y para construir soluciones innovadoras.',
             /* 3 */'sobreParagrafo3': 'Estoy buscando oportunidades para contribuir a un equipo dedicado en un ambiente de trabajo desafiante, para crecer profesionalmente y para seguir mejorando mis habilidades. Mi objetivo siempre es entregar un trabajo de alta calidad, con atención al detalle y a las necesidades del usuario, y construir productos que tengan un impacto positivo en la vida de las personas.',
@@ -187,7 +187,7 @@ const resources = {
             'Nome': 'Gildair Moreira',
             'Profisao': 'Desenvolvedor Front-end .',
 
-            'Estado': 'Jaboticatubas MG, Brasil',
+            'Estado': 'Belo Horizonte MG, Brasil',
             /* 1 */'sobreParagrafo1':'Sou Gildair Moreira, um desenvolvedor front-end apaixonado por transformar ideias em realidade. Minha jornada como programador começou há alguns anos com modificaçoes em Apps de terceiros, quando comecei a aprender por conta própria as habilidades necessárias para construir aplicações web e móveis. Desde então, venho aprimorando minhas habilidades em React e outras tecnologias, e transformando minhas ideias em projetos bem-sucedidos.',
             /* 2 */'sobreParagrafo2':'Apesar de não ter experiência formal no mercado, dediquei-me intensamente ao aprendizado e consegui dominar habilidades essenciais em apenas 8 meses. Meus projetos pessoais e colaborativos são exemplos de minha capacidade de trabalhar de forma independente e em equipe, de identificar e resolver problemas e de construir soluções inovadoras.',
             /* 3 */'sobreParagrafo3':'Busco oportunidades para contribuir com uma equipe comprometida em um ambiente de trabalho desafiador, para crescer profissionalmente e para continuar a aprimorar minhas habilidades. Meu objetivo é sempre entregar um trabalho de alta qualidade, com atenção aos detalhes e às necessidades do usuário, e construir produtos que gerem impacto positivo na vida das pessoas.',

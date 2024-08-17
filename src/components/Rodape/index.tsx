@@ -10,7 +10,7 @@ export default function Rodape()
   const { t } = useTranslation()
 
   const linkDiscord = 'https://discordapp.com/users/946179480576229386';
-  const linkWhatsap = 'https://api.whatsapp.com/send?phone=31997831239&text=Olá, vi que você é um programador front-end. Está disponível para projetos? Se sim, envie-me uma mensagem.';
+  const linkWhatsap = 'https://api.whatsapp.com/send?phone=31999494987&text=Olá, vi que você é um programador front-end. Está disponível para projetos? Se sim, envie-me uma mensagem.';
 
   return (
     <footer className={styles.rodape__container}>

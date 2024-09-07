@@ -46,7 +46,7 @@ Para rodar o projeto em ambiente de desenvolvimento, siga os passos abaixo:
 
 ## Autor
 
-Esse projeto foi desenvolvido por [seu nome aqui]. Entre em contato comigo pelo e-mail [seu email aqui] ou pelas minhas redes sociais (links na seção de contato do site).
+Esse projeto foi desenvolvido por Gildair.
 
 ## Licença
 

@@ -6,6 +6,9 @@ import FormacaoAcademica from "components/Formacao";
 import './reset.module.scss'
 import Projetos from "components/Projetos";
 import Rodape from "components/Rodape";
+import { inject } from '@vercel/analytics';
+
+inject();
 
 function App()
 {

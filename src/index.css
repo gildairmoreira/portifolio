@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary-dark;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-8xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-1 {
+    @apply font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+  }
+
+  .heading-2 {
+    @apply font-display text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+
+  .heading-3 {
+    @apply font-display text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+
+  .button {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition-colors;
+  }
+
+  .button-primary {
+    @apply button bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .button-outline {
+    @apply button border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+}

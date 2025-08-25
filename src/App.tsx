@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Formacao from "./sections/Formacao";
 import Footer from "./sections/Footer";
 import Contact from "./components/Contact";
@@ -25,6 +26,7 @@ const App = () => (
     <Contact />
     <Footer />
     <Analytics />
+    <SpeedInsights />
   </>
 );
 

@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import Formacao from "./sections/Formacao";
 import Footer from "./sections/Footer";
 import Contact from "./components/Contact";
@@ -23,6 +24,7 @@ const App = () => (
     <Formacao />
     <Contact />
     <Footer />
+    <Analytics />
   </>
 );
 

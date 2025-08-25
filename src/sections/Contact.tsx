@@ -57,39 +57,39 @@ const Contact = () => {
                 className="w-full flex flex-col gap-7"
               >
                 <div>
-                  <label htmlFor="name">Your name</label>
+                  <label htmlFor="name">Seu nome</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="What’s your good name?"
+                    placeholder="Qual é o seu nome?"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email">Your Email</label>
+                  <label htmlFor="email">Seu Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="What’s your email address?"
+                    placeholder="Qual é o seu endereço de email?"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message">Your Message</label>
+                  <label htmlFor="message">Sua Mensagem</label>
                   <textarea
                     id="message"
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="How can I help you?"
+                    placeholder="Como posso te ajudar?"
                     rows={5}
                     required
                   />
@@ -99,7 +99,7 @@ const Contact = () => {
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
+                      {loading ? "Enviando..." : "Enviar Mensagem"}
                     </p>
                     <div className="arrow-wrapper">
                       <img src="/images/ui/arrow-down.svg" alt="arrow" />

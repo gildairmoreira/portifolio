@@ -266,7 +266,7 @@ const projects = [
     title: "Reaper Quest",
     description: "Jogo desenvolvido para a matéria de POO na faculdade, seguindo conceitos de orientação a objetos em Python.",
     image: "/images/projects/project4.png",
-    repository: "https://github.com/HypPedroic/jogo-trabalho-POO",
+    repository: "https://drive.google.com/file/d/1T4qI33puZ3GuSRbhDtEKBLJocz8iyARg/view?usp=sharing",
     deploy: null,
     technologies: ["Python", "Pygame", "POO"]
   },

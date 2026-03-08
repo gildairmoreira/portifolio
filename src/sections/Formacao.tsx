@@ -27,9 +27,9 @@ const FormacaoCard: React.FC<{ item: FormacaoItem }> = ({ item }) => {
       <div className="w-32 h-20 mb-3 mx-auto flex items-center justify-center bg-gray-50 rounded-lg p-2">
         <img src={item.image} alt={`Logo ${item.institution}`} className="max-w-full max-h-full object-contain filter hover:scale-110 transition-transform duration-300" />
       </div>
-      
+
       <hr className="w-full border-gray-300 mb-3" />
-      
+
       {/* Conteúdo de texto - mais compacto */}
       <div className="text-center flex-1 flex flex-col justify-between">
         <div>
@@ -37,17 +37,17 @@ const FormacaoCard: React.FC<{ item: FormacaoItem }> = ({ item }) => {
           <p className="text-gray-700 font-medium text-xs mb-1">{item.institution}</p>
           <p className="text-gray-500 text-xs">{item.date}</p>
         </div>
-        
+
         {/* Botão sempre visível e dentro do card */}
-        <a 
-          href={item.link} 
-          target="_blank" 
+        <a
+          href={item.link}
+          target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 px-3 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300 text-xs font-medium w-full justify-center mt-3 shadow-md"
         >
           Ver Certificado
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </a>
       </div>
@@ -57,29 +57,32 @@ const FormacaoCard: React.FC<{ item: FormacaoItem }> = ({ item }) => {
 
 const Formacao: React.FC = () => {
   useGSAP(() => {
+    // Check if mobile for less aggressive animations
+    const isMobile = window.innerWidth < 768;
+
     // Animate the formation cards
     gsap.utils.toArray(".formacao-card").forEach((card) => {
       gsap.from(card as gsap.TweenTarget, {
-        yPercent: 50,
+        yPercent: isMobile ? 20 : 50,
         opacity: 0,
-        duration: 1,
+        duration: isMobile ? 0.5 : 1,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: card as gsap.DOMTarget,
-          start: "top 80%",
+          start: isMobile ? "top 100%" : "top 80%",
         },
       });
     });
 
     // Animate the university info
     gsap.from(".university-info", {
-      yPercent: 30,
+      yPercent: isMobile ? 10 : 30,
       opacity: 0,
-      duration: 1,
+      duration: isMobile ? 0.5 : 1,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: ".university-info",
-        start: "top 80%",
+        start: isMobile ? "top 100%" : "top 80%",
       },
     });
   }, []);
@@ -205,13 +208,13 @@ const Formacao: React.FC = () => {
       link: "https://cursos.alura.com.br/user/gildair/course/figma-construindo-layout-primeiro-site-mobile/certificate"
     },
     {
-       id: 16,
-       title: "Programação Front-End",
-       institution: "SENAI",
-       date: "2023",
-       image: "/images/certificates/senai-certificate.png",
-       link: "https://drive.google.com/file/d/1uuWtHhSI9io-hKiMXXsIcRKZOse_3vYE/view"
-     }
+      id: 16,
+      title: "Programação Front-End",
+      institution: "SENAI",
+      date: "2023",
+      image: "/images/certificates/senai-certificate.png",
+      link: "https://drive.google.com/file/d/1uuWtHhSI9io-hKiMXXsIcRKZOse_3vYE/view"
+    }
   ];
 
   return (
@@ -221,28 +224,32 @@ const Formacao: React.FC = () => {
           title="Minha Formação"
           sub="🎓 Educação e Certificações"
         />
-        
+
         {/* University Information */}
         <div className="university-info mt-16 mb-12 text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-xl p-8 max-w-6xl mx-auto">
+          {/* UFV */}
+          <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-xl p-8 max-w-6xl mx-auto mb-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
-              {/* Logo da UFV - Aumentada e Centralizada */}
+              {/* Logo da UFV */}
               <div className="flex-shrink-0 flex justify-center mb-6 md:mb-0">
                 <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                   <img src="/images/logos/logotipo-UFV.png" alt="Logo UFV" className="w-48 h-36 object-contain mx-auto" />
                 </div>
               </div>
-              
-              {/* Informações da Faculdade */}
+
+              {/* Informações da UFV */}
               <div className="flex-1">
-                <h2 className="text-2xl font-semibold text-white mb-4">🏛️ Formação Acadêmica</h2>
+                <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                  <h2 className="text-2xl font-semibold text-white">🏛️ Formação Acadêmica</h2>
+                  <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-xs font-medium">Transferido</span>
+                </div>
                 <div className="text-lg text-white-50 mb-6">
                   <p className="mb-2"><strong>Bacharelado em Sistemas de Informação</strong></p>
                   <p className="mb-2">Universidade Federal de Viçosa (UFV)</p>
-                  <p className="text-blue-400">📅 2024 - 2028</p>
+                  <p className="text-blue-400">📅 2024 - 2026</p>
                 </div>
-                
-                {/* Disciplinas e Habilidades */}
+
+                {/* Disciplinas UFV */}
                 <div className="text-left">
                   <h3 className="text-xl font-semibold text-white mb-4">📚 Principais Disciplinas Cursadas</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
@@ -271,8 +278,8 @@ const Formacao: React.FC = () => {
                       <p className="text-white-50">Metodologias ágeis, requisitos, análise de sistemas, arquitetura de software, testes e deploy de aplicações</p>
                     </div>
                   </div>
-                  
-                  {/* Habilidades para o Mercado - Simplificado e Discreto */}
+
+                  {/* Habilidades UFV */}
                   <div className="mt-6 p-3 bg-white/5 border border-white/10 rounded-lg">
                     <h4 className="text-sm font-medium text-white/70 mb-2">💼 Habilidades Desenvolvidas</h4>
                     <div className="flex flex-wrap gap-2 text-xs">
@@ -288,38 +295,103 @@ const Formacao: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Indicador de transferência */}
+          <div className="flex justify-center my-4">
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-0.5 h-8 bg-gradient-to-b from-blue-500 to-emerald-500"></div>
+              <span className="text-xs text-white/50 bg-white/5 px-4 py-1.5 rounded-full border border-white/10">↓ Transferência</span>
+              <div className="w-0.5 h-8 bg-gradient-to-b from-emerald-500 to-emerald-400"></div>
+            </div>
+          </div>
+
+          {/* Estácio de Sá */}
+          <div className="bg-gradient-to-r from-emerald-500/10 to-teal-600/10 border border-emerald-500/20 rounded-xl p-8 max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Logo da Estácio */}
+              <div className="flex-shrink-0 flex justify-center mb-6 md:mb-0">
+                <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                  <img src="/images/logos/logo-estacio.png" alt="Logo Estácio de Sá" className="w-48 h-36 object-contain mx-auto" />
+                </div>
+              </div>
+
+              {/* Informações da Estácio */}
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                  <h2 className="text-2xl font-semibold text-white">🎓 Formação Atual</h2>
+                  <span className="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Em andamento</span>
+                </div>
+                <div className="text-lg text-white-50 mb-6">
+                  <p className="mb-2"><strong>Bacharelado em Sistemas de Informação</strong></p>
+                  <p className="mb-2">Estácio de Sá</p>
+                  <p className="text-emerald-400">📅 2026 - 2029</p>
+                </div>
+
+                {/* Disciplinas Estácio */}
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold text-white mb-4">📚 Disciplinas em Curso</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                    <div className="bg-white/5 rounded-lg p-3">
+                      <h4 className="font-semibold text-emerald-400 mb-1">🌐 Desenv. Web em HTML5, CSS, JS e PHP</h4>
+                      <p className="text-white-50">Criação de aplicações web completas com tecnologias front-end e back-end</p>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-3">
+                      <h4 className="font-semibold text-emerald-400 mb-1">☁️ Computação em Nuvem</h4>
+                      <p className="text-white-50">Infraestrutura cloud, deploy, escalabilidade e serviços AWS/Azure/GCP</p>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-3">
+                      <h4 className="font-semibold text-emerald-400 mb-1">📱 Desenv. Dispositivos Móveis</h4>
+                      <p className="text-white-50">Criação de aplicativos mobile com tecnologias nativas e cross-platform</p>
+                    </div>
+                  </div>
+
+                  {/* Habilidades Estácio */}
+                  <div className="mt-6 p-3 bg-white/5 border border-white/10 rounded-lg">
+                    <h4 className="text-sm font-medium text-white/70 mb-2">💼 Competências em Desenvolvimento</h4>
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-emerald-500/20 text-emerald-300 px-2 py-1 rounded">Cloud Computing</span>
+                      <span className="bg-teal-500/20 text-teal-300 px-2 py-1 rounded">Desenvolvimento Mobile</span>
+                      <span className="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded">Full Stack Web</span>
+                      <span className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded">PHP</span>
+                      <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded">DevOps</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16">
           <h3 className="text-2xl font-semibold text-white text-center mb-12">📜 Certificações e Cursos</h3>
           <div className="mt-12">
-              <Swiper
-                modules={[Navigation, Pagination, A11y]}
-                spaceBetween={30}
-                slidesPerView={1}
-                navigation
-                pagination={{ clickable: true }}
-                breakpoints={{
-                  640: {
-                    slidesPerView: 2,
-                  },
-                  1024: {
-                    slidesPerView: 3,
-                  },
-                }}
-                className="formacao-swiper px-[10%] md:px-4"
-              >
-                {certificados.map((certificado) => (
-                  <SwiperSlide key={certificado.id}>
-                    <FormacaoCard item={certificado} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
+            <Swiper
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+              className="formacao-swiper px-[10%] md:px-4"
+            >
+              {certificados.map((certificado) => (
+                <SwiperSlide key={certificado.id}>
+                  <FormacaoCard item={certificado} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Formacao;

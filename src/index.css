@@ -38,13 +38,16 @@ section {
   .flex-center {
     @apply flex justify-center items-center;
   }
+
   .flex-col-center {
     @apply flex flex-col justify-center items-center;
   }
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -93,14 +96,111 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    @apply relative z-20 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    pointer-events: none;
+  }
+
+  .hero-layout header,
+  .hero-layout a,
+  .hero-layout button {
+    pointer-events: auto;
+  }
+
+  #hero {
+    position: relative;
+    overflow: hidden;
+    clip: rect(0, auto, auto, 0);
+  }
+
+  .hero-spline-bg {
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    width: 58%;
+    height: 95%;
+    z-index: 25;
+    pointer-events: auto;
+    overflow: hidden;
+  }
+
+  /* Large desktop */
+  @media (min-width: 1921px) {
+    .hero-spline-bg {
+      top: 0%;
+      right: 0%;
+      width: 50%;
+      height: 90%;
+    }
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .hero-spline-bg {
+      top: -5%;
+      right: -10%;
+      width: 55%;
+      height: 80%;
+    }
+  }
+
+  /* Mobile - CSS-only orb glow replacement (no Spline loaded) */
+  @media (max-width: 768px) {
+    .hero-spline-bg {
+      display: none !important;
+    }
+  }
+
+  /* Lightweight CSS orb glow for mobile */
+  .hero-orb-glow {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%,
+        rgba(99, 65, 255, 0.25) 0%,
+        rgba(99, 65, 255, 0.12) 30%,
+        rgba(99, 65, 255, 0.05) 55%,
+        transparent 70%);
+    filter: blur(30px);
+    z-index: 12;
+    pointer-events: none;
+    animation: orbPulse 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes orbPulse {
+    0% {
+      opacity: 0.5;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+  .hero-spline-bg canvas {
+    display: block;
+  }
+
+  /* Hide Spline watermark */
+  .hero-spline-bg>div>a,
+  .hero-spline-bg>div>div:last-child {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   .hero-text {
     @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+
     img {
       @apply size-8 md:size-10 object-contain;
     }
+
     .slide {
       @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
     }
@@ -108,22 +208,6 @@ section {
 
   .hero-badge {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
-  }
-
-  .hero-3d-layout {
-    @apply xl:w-[50%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
-    pointer-events: auto;
-  }
-
-  .hero-3d-layout::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
   }
 
   .navbar {
@@ -234,19 +318,15 @@ section {
     @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
-      @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-        rounded-full bg-white-50 transition-all duration-500;
+      @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 w-[120%] h-[120%] group-hover:size-10 group-hover:right-10 rounded-full bg-white-50 transition-all duration-500;
     }
 
     .text {
-      @apply uppercase md:text-lg text-sm text-black transition-all duration-500
-        group-hover:text-white-50 group-hover:-translate-x-3 md:group-hover:-translate-x-5 xl:translate-x-0 md:-translate-x-5 -translate-x-2;
+      @apply uppercase md:text-lg text-sm text-black transition-all duration-500 group-hover:text-white-50 group-hover:-translate-x-3 md:group-hover:-translate-x-5 xl:translate-x-0 md:-translate-x-5 -translate-x-2;
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-8 md:size-10 rounded-full absolute right-2 md:right-10 top-1/2 
-        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+      @apply group-hover:bg-white-50 size-8 md:size-10 rounded-full absolute right-2 md:right-10 top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
         @apply size-4 md:size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
@@ -395,24 +475,31 @@ section {
   0% {
     transform: translateY(0.5%);
   }
+
   12.5% {
     transform: translateY(-12.5%);
   }
+
   25% {
     transform: translateY(-25%);
   }
+
   37.5% {
     transform: translateY(-37.5%);
   }
+
   50% {
     transform: translateY(-50%);
   }
+
   62.5% {
     transform: translateY(-62.5%);
   }
+
   75% {
     transform: translateY(-75%);
   }
+
   87.5% {
     transform: translateY(-87.5%);
   }
@@ -422,56 +509,47 @@ section {
 
 .gradient-line {
   width: 2px;
-  background: linear-gradient(
-    0deg,
-    rgba(69, 222, 196, 0) 0%,
-    #62e0ff 25%,
-    #52aeff 37.51%,
-    #fd5c79 62.83%,
-    #6d45ce 92.91%
-  );
+  background: linear-gradient(0deg,
+      rgba(69, 222, 196, 0) 0%,
+      #62e0ff 25%,
+      #52aeff 37.51%,
+      #fd5c79 62.83%,
+      #6d45ce 92.91%);
 }
 
 .gradient-line-freelancer {
   width: 2px;
-  background: linear-gradient(
-    0deg,
-    rgba(69, 222, 196, 0) 0%,
-    #58d68d 25%,
-    #2ecc71 50%,
-    #27ae60 75%,
-    #1e8449 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(69, 222, 196, 0) 0%,
+      #58d68d 25%,
+      #2ecc71 50%,
+      #27ae60 75%,
+      #1e8449 100%);
 }
 
 .gradient-line-assistente {
   width: 2px;
-  background: linear-gradient(
-    0deg,
-    rgba(69, 222, 196, 0) 0%,
-    #87ceeb 25%,
-    #5dade2 50%,
-    #3498db 75%,
-    #2980b9 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(69, 222, 196, 0) 0%,
+      #87ceeb 25%,
+      #5dade2 50%,
+      #3498db 75%,
+      #2980b9 100%);
 }
 
 .gradient-edge:nth-of-type(1) {
   left: 0;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 100%);
 }
+
 .gradient-edge:nth-of-type(2) {
   right: 0;
-  background: linear-gradient(
-    -90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(-90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 /* marquee */
@@ -480,6 +558,7 @@ section {
   overflow: hidden;
   position: relative;
 }
+
 .marquee-box {
   display: flex;
   align-items: center;
@@ -489,17 +568,21 @@ section {
   overflow: hidden;
   animation: marquee 60s linear infinite;
 }
+
 .marquee-item {
   float: left;
 }
+
 @keyframes marquee {
   0% {
     left: 0;
   }
+
   100% {
     left: -100%;
   }
 }
+
 /* marquee end */
 
 .card {
@@ -523,12 +606,10 @@ section {
   background: var(--gradient);
   background-attachment: fixed;
   mask: linear-gradient(#0000, #0000),
-    conic-gradient(
-      from calc((var(--start) - 15) * 1deg),
+    conic-gradient(from calc((var(--start) - 15) * 1deg),
       #ffffff1f 0deg,
       white,
-      #ffffff00 100deg
-    );
+      #ffffff00 100deg);
   mask-composite: intersect;
   mask-clip: padding-box, border-box;
   opacity: 0;

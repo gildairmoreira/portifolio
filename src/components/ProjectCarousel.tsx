@@ -33,10 +33,10 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
         gsap.fromTo(
           card,
           { opacity: 0, y: 50 },
-          { 
-            opacity: 1, 
-            y: 0, 
-            duration: 0.6, 
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
             delay: index * 0.1,
             ease: 'power2.out'
           }
@@ -55,21 +55,21 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
 
   const getVisibleProjects = () => {
     if (typeof window === 'undefined') return projects.slice(0, 3);
-    
+
     let visibleCount = 1;
     if (window.innerWidth >= 1024) {
       visibleCount = 3;
     } else if (window.innerWidth >= 768) {
       visibleCount = 2;
     }
-    
+
     const visible = [];
-    
+
     for (let i = 0; i < visibleCount; i++) {
       const index = (currentIndex + i) % projects.length;
       visible.push(projects[index]);
     }
-    
+
     return visible;
   };
 
@@ -89,7 +89,7 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
@@ -109,12 +109,12 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
 
     handleResize(); // Set initial value
     window.addEventListener('resize', handleResize);
-    
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto px-4">
+    <div className="relative w-full max-w-7xl mx-auto md:px-4 px-1">
       {/* Navigation Buttons */}
       <div className="flex justify-between items-center mb-8">
         <button
@@ -124,20 +124,19 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:text-blue-400 transition-colors" />
         </button>
-        
+
         <div className="flex space-x-1 sm:space-x-2">
           {projects.map((project, index) => (
             <button
               key={`indicator-${project.id}`}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-300 touch-manipulation ${
-                index === currentIndex ? 'bg-blue-400' : 'bg-black-300'
-              }`}
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-300 touch-manipulation ${index === currentIndex ? 'bg-blue-400' : 'bg-black-300'
+                }`}
               aria-label={`Ir para projeto ${index + 1}`}
             />
           ))}
         </div>
-        
+
         <button
           onClick={nextSlide}
           className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black-200 border border-black-300 hover:bg-black-300 transition-colors duration-300 group touch-manipulation"
@@ -148,13 +147,12 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
       </div>
 
       {/* Projects Grid */}
-      <div 
+      <div
         ref={carouselRef}
-        className={`${
-          isMobile 
-            ? 'flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-4 sm:gap-6 pb-4 touch-pan-x' 
+        className={`${isMobile
+            ? 'flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-4 sm:gap-6 pb-4 touch-pan-x'
             : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-        }`}
+          }`}
         style={isMobile ? { scrollBehavior: 'smooth' } : {}}
         onTouchStart={isMobile ? onTouchStart : undefined}
         onTouchMove={isMobile ? onTouchMove : undefined}
@@ -164,9 +162,8 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
           <div
             key={`project-card-${project.id}`}
             ref={(el) => { cardRefs.current[index] = el; }}
-            className={`group relative bg-black-200 rounded-xl border border-black-300 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105 ${
-              isMobile ? 'min-w-[260px] w-[260px] sm:min-w-[280px] sm:w-[280px] snap-center flex-shrink-0' : ''
-            }`}
+            className={`group relative bg-black-200 rounded-xl border border-black-300 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105 ${isMobile ? 'min-w-[280px] w-[280px] sm:min-w-[300px] sm:w-[300px] snap-center flex-shrink-0' : ''
+              }`}
           >
             {/* Project Image */}
             <div className="relative h-48 overflow-hidden">
@@ -183,7 +180,7 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {project.title}
               </h3>
-              
+
               <p className="text-white-50 text-sm mb-4 line-clamp-3">
                 {project.description}
               </p>
@@ -216,7 +213,7 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
                   <Github className="w-4 h-4" />
                   Repositório
                 </a>
-                
+
                 {project.deploy && (
                   <a
                     href={project.deploy}

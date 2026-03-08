@@ -1,12 +1,29 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { lazy, Suspense, useState, useEffect } from "react";
 
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
 import { words } from "../constants";
-import HeroExperience from "../components/models/hero_models/HeroExperience";
+
+// Lazy load Spline — it's a heavy dependency (~2MB)
+const Spline = lazy(() => import("@splinetool/react-spline"));
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [loadSpline, setLoadSpline] = useState(false);
+
+  useEffect(() => {
+    const mobile = window.innerWidth < 768;
+    setIsMobile(mobile);
+
+    if (!mobile) {
+      // Delay Spline load slightly to prioritize critical content
+      const timer = setTimeout(() => setLoadSpline(true), 100);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1",
@@ -21,9 +38,26 @@ const Hero = () => {
         <img src="/images/ui/bg.png" alt="" />
       </div>
 
+      {/* Spline 3D Orb - only loads on desktop for performance */}
+      {!isMobile && loadSpline && (
+        <div className="hero-spline-bg">
+          <Suspense fallback={<div className="w-full h-full" />}>
+            <Spline
+              scene="https://prod.spline.design/en7bET9tej6TRrbe/scene.splinecode"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Suspense>
+        </div>
+      )}
+
+      {/* Mobile: Static orb glow effect (CSS only, zero JS cost) */}
+      {isMobile && (
+        <div className="hero-orb-glow" />
+      )}
+
       <div className="hero-layout">
         {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5 z-20">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
@@ -61,18 +95,9 @@ const Hero = () => {
             />
           </div>
         </header>
-
-        {/* RIGHT: 3D Model or Visual */}
-        <figure>
-          <div className="hero-3d-layout">
-            <HeroExperience />
-          </div>
-        </figure>
       </div>
 
       <AnimatedCounter />
-      
-
     </section>
   );
 };

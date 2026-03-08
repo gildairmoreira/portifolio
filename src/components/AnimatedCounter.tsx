@@ -22,8 +22,8 @@ const AnimatedCounter = () => {
       // Create the counting animation
       gsap.to(numberElement, {
         innerText: item.value,
-        duration: 2.5,
-        ease: "power2.out",
+        duration: 1,
+        ease: "power3.out",
         snap: { innerText: 1 }, // Ensures whole numbers
         scrollTrigger: {
           trigger: "#counter",

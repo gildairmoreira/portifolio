@@ -28,8 +28,13 @@ const words = [
   { text: "Código", imgPath: "/images/ui/code.svg" },
 ];
 
+// Career started in June 2022 - dynamically calculate years of experience
+const careerStartYear = 2022;
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - careerStartYear;
+
 const counterItems = [
-  { value: 3, suffix: "+", label: "Anos de Experiência" },
+  { value: yearsOfExperience, suffix: "+", label: "Anos de Experiência" },
   { value: 25, suffix: "+", label: "Projetos Entregues" },
   { value: 35, suffix: "+", label: "Certificações" },
   { value: 98, suffix: "%", label: "Satisfação do Cliente" },
@@ -42,9 +47,7 @@ const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-2.png",
   },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-  },
+
   {
     imgPath: "/images/logos/company-logo-4.png",
   },
@@ -57,9 +60,7 @@ const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-7.png",
   },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
+
   {
     imgPath: "/images/logos/company-logo-9.png",
   },
@@ -245,21 +246,21 @@ const projects = [
   },
   {
     id: 2,
+    title: "Landing Page Advogada",
+    description: "Landing page institucional para escritório de advocacia com design moderno e responsivo.",
+    image: "/images/projects/project7.png",
+    repository: "https://github.com/gildairmoreira/site-grasielle",
+    deploy: "https://site-grasielle.vercel.app",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    id: 3,
     title: "Crypto Dash",
     description: "Painel de preços de criptomoedas em tempo real com gráficos interativos. ⚠️ Limitado a poucos usuários simultâneos devido aos limites da API.",
     image: "/images/projects/project2.png",
     repository: "https://github.com/gildairmoreira/crypto-dash",
     deploy: "https://cryptos-dash.netlify.app",
     technologies: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "HeroUI", "Zustand", "TanStack Query", "ApexCharts"]
-  },
-  {
-    id: 3,
-    title: "Traduz AI",
-    description: "Tradutor inteligente que traduz com contexto da conversa usando IA. Suporte a reconhecimento de voz.",
-    image: "/images/projects/project3.png",
-    repository: "https://github.com/gildairmoreira/traduz-ai",
-    deploy: "https://traduz-ai.vercel.app",
-    technologies: ["Next.js", "TypeScript", "Gemini API", "React Speech Recognition", "Tailwind CSS"]
   },
   {
     id: 4,
@@ -290,12 +291,12 @@ const projects = [
   },
   {
     id: 7,
-    title: "Landing Page Advogada",
-    description: "Landing page institucional para escritório de advocacia com design moderno e responsivo.",
-    image: "/images/projects/project7.png",
-    repository: "https://github.com/gildairmoreira/site-grasielle",
-    deploy: "https://site-grasielle.vercel.app",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"]
+    title: "Traduz AI",
+    description: "Tradutor inteligente que traduz com contexto da conversa usando IA. Suporte a reconhecimento de voz.",
+    image: "/images/projects/project3.png",
+    repository: "https://github.com/gildairmoreira/traduz-ai",
+    deploy: "https://traduz-ai.vercel.app",
+    technologies: ["Next.js", "TypeScript", "Gemini API", "React Speech Recognition", "Tailwind CSS"]
   }
 ];
 

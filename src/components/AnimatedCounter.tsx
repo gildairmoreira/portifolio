@@ -8,33 +8,38 @@ import { counterItems } from "../constants";
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedCounter = () => {
-  const counterRef = useRef(null);
-  const countersRef = useRef([]);
+  // Ref tipado corretamente para o container principal
+  const counterRef = useRef<HTMLDivElement>(null);
+  // Ref tipado como array de HTMLDivElement para os cards individuais
+  const countersRef = useRef<HTMLDivElement[]>([]);
 
   useGSAP(() => {
     countersRef.current.forEach((counter, index) => {
-      const numberElement = counter.querySelector(".counter-number");
+      // Busca o elemento de número dentro de cada card
+      const numberElement = counter.querySelector<HTMLElement>(".counter-number");
       const item = counterItems[index];
 
-      // Set initial value to 0
+      if (!numberElement) return;
+
+      // Define valor inicial como zero antes da animação
       gsap.set(numberElement, { innerText: "0" });
 
-      // Create the counting animation
+      // Cria a animação de contagem com ScrollTrigger
       gsap.to(numberElement, {
         innerText: item.value,
         duration: 1,
         ease: "power3.out",
-        snap: { innerText: 1 }, // Ensures whole numbers
+        snap: { innerText: 1 }, // Garante números inteiros durante a contagem
         scrollTrigger: {
           trigger: "#counter",
           start: "top center",
         },
-        // Add the suffix after counting is complete
+        // Adiciona o sufixo ao fim da contagem (ex: "+", "k", "%")
         onComplete: () => {
           numberElement.textContent = `${item.value}${item.suffix}`;
         },
       });
-    }, counterRef);
+    });
   }, []);
 
   return (
@@ -43,7 +48,10 @@ const AnimatedCounter = () => {
         {counterItems.map((item, index) => (
           <div
             key={index}
-            ref={(el) => el && (countersRef.current[index] = el)}
+            ref={(el) => {
+              // Armazena referência de cada card no array de refs
+              if (el) countersRef.current[index] = el;
+            }}
             className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center"
           >
             <div className="counter-number text-white-50 text-5xl font-bold mb-2">

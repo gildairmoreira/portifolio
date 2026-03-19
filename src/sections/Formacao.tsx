@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Navigation, Pagination, A11y, FreeMode, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -366,11 +366,14 @@ const Formacao: React.FC = () => {
           <h3 className="text-2xl font-semibold text-white text-center mb-12">📜 Certificações e Cursos</h3>
           <div className="mt-12">
             <Swiper
-              modules={[Navigation, Pagination, A11y]}
+              modules={[Navigation, Pagination, A11y, FreeMode, Mousewheel]}
               spaceBetween={30}
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
+              grabCursor={true}
+              freeMode={true}
+              mousewheel={{ forceToAxis: true }}
               breakpoints={{
                 640: {
                   slidesPerView: 2,

@@ -43,7 +43,7 @@ const TechStack = () => {
           sub="🤝 O Que Trago Na Bagagem"
         />
         <div className="tech-grid">
-          {techStackIcons.map((techStackIcon) => (
+          {techStackIcons.map((techStackIcon, index) => (
             <div
               key={techStackIcon.name}
               className="card-border tech-card overflow-hidden group xl:rounded-4xl rounded-lg"
@@ -53,7 +53,8 @@ const TechStack = () => {
                 <div className="tech-icon-wrapper">
                   <View className="w-full h-full">
                     <Suspense fallback={null}>
-                      <TechIconCardExperience model={techStackIcon} />
+                      {/* Passa o índice para garantir física de rotação independente por card */}
+                      <TechIconCardExperience model={techStackIcon} cardIndex={index} />
                     </Suspense>
                   </View>
                 </div>

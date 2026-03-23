@@ -11,10 +11,10 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
   </div>
 
-  <h3 align="center">Portfólio Interativo 3D</h3>
+  <h3 align="center">Portfólio Gildair</h3>
 
    <div align="center">
-     Um portfólio moderno e interativo desenvolvido com as mais recentes tecnologias web 3D.
+     Um portfólio moderno e interativo desenvolvido com as mais recentes tecnologias web.
     </div>
 </div>
 
@@ -33,7 +33,7 @@ Este é meu portfólio pessoal, desenvolvido para demonstrar minhas habilidades 
 
 ## <a name="introduction">🤖 Introdução</a>
 
-Meu portfólio 3D é um site pessoal altamente envolvente que apresenta cenas 3D animadas, transições suaves de câmera, showcases de modelos interativos e design responsivo. Foi desenvolvido para demonstrar minhas competências técnicas e criativas no desenvolvimento web moderno.
+Meu portfólio é um site pessoal altamente envolvente que apresenta cenas 3D animadas, transições suaves de câmera, showcases de modelos interativos e design responsivo. Foi desenvolvido para demonstrar minhas competências técnicas e criativas no desenvolvimento web moderno.
 
 O projeto combina tecnologias de ponta para criar uma experiência única e memorável, destacando minha capacidade de trabalhar com bibliotecas 3D, animações complexas e interfaces de usuário modernas.
 
@@ -114,7 +114,6 @@ VITE_APP_EMAILJS_TEMPLATE_ID=seu_template_id
 VITE_APP_EMAILJS_PUBLIC_KEY=sua_public_key
 ```
 
-Substitua pelos seus dados reais do **[EmailJS](https://www.emailjs.com/)**.
 
 **Executando o Projeto**
 
@@ -131,8 +130,6 @@ Abra [http://localhost:5173](http://localhost:5173/) no seu navegador para visua
 
 ## <a name="demo">🎨 Demonstração</a>
 
-Visite o portfólio ao vivo: **[Meu Portfólio 3D](http://localhost:5173/)**
-
 ### Screenshots
 
 - **Seção Hero**: Apresentação com modelo 3D interativo
@@ -145,8 +142,8 @@ Visite o portfólio ao vivo: **[Meu Portfólio 3D](http://localhost:5173/)**
 
 Gostou do projeto? Entre em contato comigo!
 
-- **Email**: [seu-email@exemplo.com](mailto:gildair457@gmail.com)
-- **Portfolio**: [Meu Site](http://gildairmoreira.com/)
+- **Email**: [gildair457@gmail.com](mailto:gildair457@gmail.com)
+- **Portfolio**: [Meu Site](http://Portifolio-gildair.vercel.app/)
 
 ---
 

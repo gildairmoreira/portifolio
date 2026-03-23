@@ -88,11 +88,20 @@ const Hero = () => {
               Olá, eu sou Gildair, um desenvolvedor FullStack.
             </p>
 
-            <Button
-              text="Veja Meu Trabalho"
-              className="md:w-80 md:h-16 w-full max-w-60 md:max-w-80 h-12"
-              id="counter"
-            />
+            <div className="flex flex-col md:flex-row gap-5">
+              <Button
+                text="Veja Meu Trabalho"
+                className="md:w-80 md:h-16 w-full max-w-60 md:max-w-80 h-12"
+                id="counter"
+              />
+              <Button
+                text="Baixar Currículo"
+                className="md:w-80 md:h-16 w-full max-w-60 md:max-w-80 h-12"
+                href="/gildair.pdf"
+                download
+                variant="secondary"
+              />
+            </div>
           </div>
         </header>
       </div>

@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import TitleHeader from "../components/TitleHeader";
+import Button from "../components/Button";
 
 const AboutMe = () => {
   useGSAP(() => {
@@ -69,6 +70,16 @@ const AboutMe = () => {
                 participando de projetos desafiadores e contribuindo com a
                 comunidade de desenvolvedores.
               </p>
+
+              <div className="pt-8 flex justify-center lg:justify-start">
+                <Button
+                  text="Baixar Currículo"
+                  className="md:w-80 md:h-16 w-full max-w-60 md:max-w-80 h-12"
+                  href="/gildair.pdf"
+                  download
+                  variant="secondary"
+                />
+              </div>
             </div>
           </div>
         </div>
